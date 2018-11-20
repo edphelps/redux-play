@@ -4,6 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// added from tutorial -------------------------
+import store from './store/index';
+import { addArticle } from './actions/index';
+
+window.store = store;
+window.addArticle = addArticle;
+// ---------------------------------------------
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
