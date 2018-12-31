@@ -15,13 +15,14 @@ class ConnectedForm extends Component {
     super();
 
     this.state = {
-      title: '',
+      title: '', // holds value as user type via handleChange()
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // generic way to get the input fields into local state as user types
   handleChange(event) {
     this.setState({ [event.target.id]: event.target.value });
   }
